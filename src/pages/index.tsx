@@ -14,8 +14,6 @@ type PriceProps = {
 
 export default function Home({ product }: PriceProps) {
 
-  console.log(product.amount)
-
   return (
     <>
       <Head>
