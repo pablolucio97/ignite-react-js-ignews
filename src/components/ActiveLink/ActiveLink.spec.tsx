@@ -1,6 +1,5 @@
-import { render } from '@testing-library/react'
-import { debug } from 'console'
-import ActiveLink from '../components/ActiveLink'
+import { render, screen } from '@testing-library/react'
+import ActiveLink from '.'
 
 jest.mock('next/router', () => {
     return {
@@ -23,11 +22,11 @@ describe('ActiveLink component', () => {
             </ActiveLink>
         )
         debug()
-        expect(getByText('OK!')).toBeInTheDocument()
+        expect(screen.getByText('OK!')).toBeInTheDocument()
     })
     
     it('active link is receiving the href attribute string', () => {
-        const { getByText } = render(
+        render(
             <ActiveLink
                 activeClassName='active'
                 href='/'
@@ -35,7 +34,7 @@ describe('ActiveLink component', () => {
                 <p>OK!</p>
             </ActiveLink>
         )
-        expect(getByText('OK!')).toHaveClass('active')
+        expect(screen.getByText('OK!')).toHaveClass('active')
     })
     
 })

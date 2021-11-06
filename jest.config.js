@@ -4,5 +4,8 @@ module.exports={
     trasform: {
         "^.+\\.(js|jsx|ts|tsx)$" : "<rootDir>/node_modules/babel-jest"
     },
+    moduleNameMapper: {
+        "\\.(css|scss|saas)$" : "identity-obj-proxy"
+    },
     testEnvironment: 'jsdom'
 }
