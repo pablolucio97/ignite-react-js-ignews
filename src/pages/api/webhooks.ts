@@ -26,6 +26,7 @@ const relevantEvents = new Set([
   "customer.subscription.deleted",
 ]);
 
+//eslint-disable-next-line 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const buf = await buffer(req);

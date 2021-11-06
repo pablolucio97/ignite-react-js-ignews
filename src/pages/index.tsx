@@ -3,6 +3,7 @@ import styles from './home.module.scss'
 import { SubscribeButton } from '../components/SubscribeButton'
 import { GetStaticProps } from 'next'
 import { stripe } from '../services/stripe'
+import Image from 'next/image'
 
 type PriceProps = {
   product: {
@@ -29,7 +30,7 @@ export default function Home({ product }: PriceProps) {
           </p>
           <SubscribeButton />
         </section>
-        <img src="/images/avatar.svg" alt="ig news" />
+        <Image src="/images/avatar.svg" alt="ig news" width={400} height={500} />
       </main>
     </>
   )
