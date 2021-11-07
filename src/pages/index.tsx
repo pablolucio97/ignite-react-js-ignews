@@ -7,7 +7,6 @@ import Image from 'next/image'
 
 type PriceProps = {
   product: {
-    priceId: string;
     amount: string
   }
 }
