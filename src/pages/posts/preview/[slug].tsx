@@ -17,7 +17,7 @@ type PostPreviewProps = {
     }
 }
 
-export default function Post({ post }: PostPreviewProps) {
+export function Preview({ post }: PostPreviewProps) {
 
 
     const [session] = useSession()

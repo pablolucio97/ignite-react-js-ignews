@@ -1,5 +1,5 @@
 import {render, screen, waitFor} from '@testing-library/react'
-import {Async} from '../../components/Async'
+import {Async} from '.'
 
 describe('Async', () => {
     it('Should wait the button render ad find this element', async () => {

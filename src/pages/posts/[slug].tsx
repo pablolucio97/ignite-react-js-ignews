@@ -15,7 +15,7 @@ type PostProps = {
     }
 }
 
-export default function Post({ post }: PostProps) {
+export function Post({ post }: PostProps) {
     return (
         <>
             <Head>

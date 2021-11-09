@@ -7,10 +7,11 @@ module.exports={
     moduleNameMapper: {
         "\\.(css|scss|saas)$" : "identity-obj-proxy"
     },
+    testEnvironment: "jsdom",
     collectCoverage: true,
     collectCoverageFrom: [
-        "src/tests/**/*.tsx",
-        "!src/tests/**/*.spec.tsx",
+        "src/**/*.tsx",
+        "!src/**/*.spec.tsx",
         "!src/**/_app.tsx",
         "!src/**/_document.tsx"
     ],

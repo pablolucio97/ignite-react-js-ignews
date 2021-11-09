@@ -18,7 +18,7 @@ type Posts = {
 }
 
 
-export default function Posts({ posts }: Posts) {
+export function Posts({ posts }: Posts) {
 
 
     return (

@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react'
-import {SignInButton} from '../../components/SignInButton'
+import {SignInButton} from '.'
 import {useSession} from 'next-auth/client'
 import {mocked} from 'ts-jest/utils'
 

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Posts, { getStaticProps } from '../../pages/posts'
+import { getStaticProps, Posts } from '.'
 import { getPrismicClient } from '../../services/prismic'
 import { mocked } from 'ts-jest/utils'
 
@@ -14,7 +14,7 @@ const posts = [
 
 jest.mock('../../services/prismic')
 
-describe('Posts page', () => {
+describe('Posts', () => {
     it('Should to render the page posts correctly', () => {
         render(
             <Posts
