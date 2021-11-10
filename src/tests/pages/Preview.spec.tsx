@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react'
-import { getStaticProps, Preview } from '../../pages/posts/preview/[slug]'
+import Preview, { getStaticProps } from '../../pages/posts/preview/[slug]'
 import { useSession } from 'next-auth/client'
 import { mocked } from 'ts-jest/utils'
 import { getPrismicClient } from '../../services/prismic'
