@@ -1,12 +1,12 @@
 import { screen, render } from '@testing-library/react'
-import { getStaticProps, Preview } from './[slug]'
+import { getStaticProps, Preview } from '../../pages/posts/preview/[slug]'
 import { useSession } from 'next-auth/client'
 import { mocked } from 'ts-jest/utils'
-import { getPrismicClient } from '../../../services/prismic'
+import { getPrismicClient } from '../../services/prismic'
 
 jest.mock('next-auth/client')
 jest.mock('next/router')
-jest.mock('../../../services/prismic')
+jest.mock('../../services/prismic')
 
 const post = {
     slug: 'fake-slug-1',

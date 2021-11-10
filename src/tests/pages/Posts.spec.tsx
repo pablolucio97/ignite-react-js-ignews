@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Posts, { getStaticProps } from '.'
+import Posts, { getStaticProps } from '../../pages/posts'
 import { getPrismicClient } from '../../services/prismic'
 import { mocked } from 'ts-jest/utils'
 

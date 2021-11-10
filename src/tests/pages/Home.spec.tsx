@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import Home, { getStaticProps } from '.'
-import { stripe } from '../services/stripe'
+import Home, { getStaticProps } from '../../pages'
+import { stripe } from '../../services/stripe'
 import { mocked } from 'ts-jest/utils'
 
-jest.mock('../services/stripe')
+jest.mock('../../services/stripe')
 
 describe('Home', () => {
     it('Home page renders correctly', () => {
