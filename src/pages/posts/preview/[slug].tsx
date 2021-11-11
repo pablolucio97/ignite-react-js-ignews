@@ -56,9 +56,7 @@ export default function Preview({ post }: PostPreviewProps) {
 
 export const getStaticPaths = () => {
     return {
-        paths: [
-            {params: { slug: 'my_desired_page_to_be_static_built'}}
-        ],
+        paths: [],
         fallback: 'blocking'
     }
 }
