@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next"
-import { getSession, useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/client'
+import {useRouter} from 'next/router'
 import { getPrismicClient } from "../../../services/prismic"
 import { RichText } from 'prismic-dom'
 import Head from 'next/head'
@@ -21,12 +22,13 @@ export default function Preview({ post }: PostPreviewProps) {
 
 
     const [session] = useSession()
+    const Router = useRouter()
 
     useEffect(() => {
         if(session?.activeSubscription){
-            router.push(`/posts/${post.slug}`)
+            Router.push(`/posts/${post.slug}`)
         }
-    }, [session, post.slug])
+    }, [session])
 
     return (
         <>
