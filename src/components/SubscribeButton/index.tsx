@@ -32,6 +32,7 @@ export function SubscribeButton() {
             await stripe.redirectToCheckout({ sessionId })
 
         } catch (error) {
+            console.log(error)
         }
     }
 
